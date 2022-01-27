@@ -6,7 +6,7 @@ function AddProduct() {
   return (
     <AddProductContainer>
       sdf
-      <ContentLayout title="제목" subtitle="subtitle"></ContentLayout>
+      <ContentLayout title="제목" subtitle="subtitle" />
     </AddProductContainer>
   );
 }
