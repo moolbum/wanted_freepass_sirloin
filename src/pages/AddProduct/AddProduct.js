@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContentLayout from '../../utils/ContentLayout';
+import Toggle from '../../utils/Toggle/index';
 import SalesPeriod from './SalesPeriod/index';
 
 function AddProduct() {
@@ -11,6 +12,7 @@ function AddProduct() {
         subtitle="상품 노출 기한"
         content={<SalesPeriod />}
       />
+      <Toggle />
     </AddProductContainer>
   );
 }
