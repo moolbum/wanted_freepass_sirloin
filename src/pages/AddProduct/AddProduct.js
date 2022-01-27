@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import SalesPeriod from './SalesPeriod/index';
+import ContentLayout from '../../utils/ContentLayout';
 
 function AddProduct() {
   return (
-    <Container>
-      <SalesPeriod />
-    </Container>
+    <AddProductContainer>
+      sdf
+      <ContentLayout title="제목" subtitle="subtitle" />
+    </AddProductContainer>
   );
 }
 
 export default AddProduct;
 
-const Container = styled.div``;
+const AddProductContainer = styled.div``;
