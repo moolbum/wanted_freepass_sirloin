@@ -5,8 +5,7 @@ import ContentLayout from '../../utils/ContentLayout';
 function AddProduct() {
   return (
     <AddProductContainer>
-      sdf
-      <ContentLayout title="제목" subtitle="subtitle"></ContentLayout>
+      <ContentLayout title="상품 옵션"></ContentLayout>
     </AddProductContainer>
   );
 }
