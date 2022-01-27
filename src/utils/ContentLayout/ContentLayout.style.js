@@ -1,9 +1,8 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Card = styled.div`
   width: 100%;
-  margin: 20px;
-  border: 2px solid #ddd;
+  border: 1px solid #ddd;
   font-size: 20px;
 `;
 
@@ -13,7 +12,7 @@ export const CardInnerWrap = styled.div`
 `;
 
 export const CardTitle = styled.div`
-  margin: 20px;
+  padding: 20px;
   font-weight: bold;
 `;
 
