@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Card = styled.div`
   width: 100%;
@@ -6,12 +6,8 @@ export const Card = styled.div`
   font-size: 20px;
 `;
 
-export const CardInnerWrap = styled.div`
-  /* border-bottom: 1px solid #ddd; */
-`;
-
 export const CardTitle = styled.div`
-  margin: 20px;
+  padding: 20px;
   font-weight: bold;
 `;
 
@@ -22,6 +18,11 @@ export const CardTitleWrap = styled.div`
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid #ddd;
+`;
+
+export const ContentWrapper = styled.div`
+  display: flex;
+  width: 100%;
 `;
 
 export const ContentTitleWrap = styled.div`
