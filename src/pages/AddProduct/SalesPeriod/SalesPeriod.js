@@ -9,9 +9,9 @@ const SalesPeriod = () => {
       {PRODUCT_EXPOSE.map(data => {
         return <Radio key={data.id} name={data.name} value={data.value} />;
       })}
-      {PRODUCT_SELLING.map(data => {
+      {/* {PRODUCT_SELLING.map(data => {
         return <Radio key={data.id} name={data.name} value={data.value} />;
-      })}
+      })} */}
     </div>
   );
 };

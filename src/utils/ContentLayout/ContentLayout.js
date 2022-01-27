@@ -8,9 +8,11 @@ function ContentLayout({ title, subtitle, content }) {
         <S.CardTitle>{title}</S.CardTitle>
       </S.CardInnerWrap>
       <S.CardContent>
-        <S.ContentTitleWrap>
-          <S.ContentTitle>{subtitle}</S.ContentTitle>
-        </S.ContentTitleWrap>
+        {subtitle && (
+          <S.ContentTitleWrap>
+            <S.ContentTitle>{subtitle}</S.ContentTitle>
+          </S.ContentTitleWrap>
+        )}
         <S.InnerContent>{content}</S.InnerContent>
       </S.CardContent>
     </S.Card>
