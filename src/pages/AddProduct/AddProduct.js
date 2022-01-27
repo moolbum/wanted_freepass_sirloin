@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContentLayout from '../../utils/ContentLayout';
+import ProductOptions from '../ProductOptions/ProductOptions';
 
 function AddProduct() {
   return (
     <AddProductContainer>
-      <ContentLayout title="상품 옵션"></ContentLayout>
+      <ContentLayout
+        title="상품 옵션"
+        content={<ProductOptions />}
+        button="옵션"
+      ></ContentLayout>
     </AddProductContainer>
   );
 }
