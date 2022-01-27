@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContentLayout from '../../utils/ContentLayout';
+import ProductOptions from '../ProductOptions/ProductOptions';
 
 import { CONTENT } from './AddProductData';
 
@@ -15,6 +16,8 @@ function AddProduct() {
             subtitle={data.subtitle}
             content={data.content}
             margin={data.margin}
+            button={data.button}
+            border={data.border}
           />
         );
       })}
