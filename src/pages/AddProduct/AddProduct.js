@@ -1,12 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import SalesPeriod from './SalesPeriod/index';
 
 function AddProduct() {
-  return <AddProductContainer>sdf</AddProductContainer>;
+  return (
+    <Container>
+      <SalesPeriod />
+    </Container>
+  );
 }
 
 export default AddProduct;
 
-const AddProductContainer = styled.div`
-  color: ${props => props.theme.blue};
-`;
+const Container = styled.div``;
