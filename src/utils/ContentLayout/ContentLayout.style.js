@@ -21,7 +21,7 @@ export const CardContent = styled.div`
 `;
 
 export const ContentTitleWrap = styled.div`
-  width: 20%;
+  padding-right: 6%;
   background: #f5f5f5;
   border-right: 1px solid #ddd;
 `;
@@ -31,6 +31,5 @@ export const ContentTitle = styled.div`
 `;
 
 export const InnerContent = styled.div`
-  width: 80%;
   margin: 20px;
 `;
