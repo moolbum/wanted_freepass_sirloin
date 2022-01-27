@@ -1,16 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContentLayout from '../../utils/ContentLayout';
-import SalesPeriod from './SalesPeriod/index';
+
+import { CONTENT } from './AddProductData';
 
 function AddProduct() {
   return (
     <AddProductContainer>
-      <ContentLayout
-        title="노출 및 판매기간 설정"
-        subtitle="상품 노출 기한"
-        content={<SalesPeriod />}
-      />
+      {CONTENT.map(data => {
+        return (
+          <ContentLayout
+            key={data.id}
+            title={data.title}
+            subtitle={data.subtitle}
+            content={data.content}
+            margin={data.margin}
+          />
+        );
+      })}
     </AddProductContainer>
   );
 }
