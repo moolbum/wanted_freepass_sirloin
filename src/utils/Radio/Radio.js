@@ -5,7 +5,7 @@ const Radio = ({ name, value }) => {
   return (
     <S.Label name={name}>
       <S.Radio name={name} />
-      {value}
+      <S.Text>{value}</S.Text>
     </S.Label>
   );
 };

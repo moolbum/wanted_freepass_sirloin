@@ -1,13 +1,15 @@
 import React from 'react';
 import Radio from '../../../utils/Radio/index';
 import * as S from './SalesPeriod.style';
-import { RADIO_EXPOSURE } from './data';
+import { PRODUCT_EXPOSE, PRODUCT_SELLING } from './data';
 
 const SalesPeriod = () => {
   return (
     <div>
-      <S.Text>2</S.Text>
-      {RADIO_EXPOSURE.map(data => {
+      {PRODUCT_EXPOSE.map(data => {
+        return <Radio key={data.id} name={data.name} value={data.value} />;
+      })}
+      {PRODUCT_SELLING.map(data => {
         return <Radio key={data.id} name={data.name} value={data.value} />;
       })}
     </div>

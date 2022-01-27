@@ -1,35 +1,35 @@
-export const RADIO_EXPOSURE = [
+export const PRODUCT_EXPOSE = [
   {
     id: 0,
-    name: 'exposure',
+    name: 'expose',
     value: '제한없음',
   },
   {
     id: 1,
-    name: 'exposure',
+    name: 'expose',
     value: '미노출',
   },
   {
     id: 2,
-    name: 'exposure',
+    name: 'expose',
     value: '노출 기간 설정',
   },
 ];
 
-export const RADIO_SALE = [
+export const PRODUCT_SELLING = [
   {
     id: 0,
-    name: 'salet',
+    name: 'sale',
     value: '제한없음',
   },
   {
     id: 1,
-    name: 'salet',
+    name: 'sale',
     value: '미판매',
   },
   {
     id: 2,
-    name: 'salet',
+    name: 'sale',
     value: '판매 기간 설정',
   },
 ];
