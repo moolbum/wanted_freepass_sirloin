@@ -16,6 +16,16 @@ export const Wrapper = styled.div`
 `;
 
 export const Tag = styled.div`
-  padding: 5px;
-  background-color: ${({ theme }) => theme.blue};
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  border: 1px solid ${({ theme }) => theme.blue};
+  color: ${({ theme }) => theme.blue};
+  border-radius: 15px;
+`;
+
+export const Delete = styled.button`
+  border: none;
+  color: ${({ theme }) => theme.blue};
 `;
