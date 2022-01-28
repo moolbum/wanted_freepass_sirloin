@@ -1,158 +1,78 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import * as S from './LayoutInner.style';
 import ProductOptionsButton from '../../ProductOptionsButton/ProductOptionsButton';
+import InnerSubContent from './InnerSubContent/InnerSubContent';
 
-function LayoutInner({ onRemove }) {
+function LayoutInner() {
   const [Selected, setSelected] = useState('비과세');
   const handleSelect = e => {
     setSelected(e.target.value);
     console.log(e.target.value);
   };
+
+  const [detailOptions, setDetailOptions] = useState([]);
+
+  const onHandleDetailOptions = () => {
+    let countArr = [...detailOptions];
+    let counter = Number(countArr.slice(-1));
+    counter += 1;
+    // console.log(typeof counter);
+    countArr.push(counter);
+    setDetailOptions(countArr);
+    console.log(countArr);
+    console.log(counter);
+  };
   return (
     <>
-      <ButtonWrap>
-        <Button onClick={onRemove}>삭제</Button>
-      </ButtonWrap>
-      <InnerContentWrap>
-        <InnerContent>
+      <S.ButtonWrap>
+        <S.Button>삭제</S.Button>
+      </S.ButtonWrap>
+      <S.InnerContentWrap>
+        <S.InnerContent>
           <ProductOptionsButton borderColor="#333">
             + 이미지 첨부
           </ProductOptionsButton>
-        </InnerContent>
-        <InnerSubContent>
-          <OptionsNameInput placeholder="옵션명을 입력해주세요. (필수)" />
-          {/* <InputWrap> */}
-          {/* <OptionsInputWrap>
-              <OptionsInput placeholder="상품 판매가(필수)" />원
-            </OptionsInputWrap>
-            <Text>할인율 %</Text>
-            <OptionsInputWrap>
-              <OptionsInput placeholder="상품 판매가(필수)" />원
-            </OptionsInputWrap>
-            <OptionsInputWrap>
-              <OptionsInput placeholder="상품" />원
-            </OptionsInputWrap>
-            {/* <OptionsInput placeholder="재고(필수)" />개 */}
-          {/* <ReceiptCountry onChange={handleSelect} value={Selected}>
-              <Option value="비과세" selected="selected">
+        </S.InnerContent>
+        <S.InnerSubContent>
+          <S.OptionsNameInput placeholder="옵션명을 입력해주세요. (필수)" />
+          <S.InputWrap>
+            <S.OptionsInputWrap>
+              <S.OptionsInput placeholder="상품 판매가(필수)" />
+              <S.Text>원</S.Text>
+            </S.OptionsInputWrap>
+            <S.Text>할인율 %</S.Text>
+            <S.OptionsInputWrap>
+              <S.OptionsInput placeholder="상품 판매가(필수)" />
+              <S.Text>원</S.Text>
+            </S.OptionsInputWrap>
+            <S.OptionsInputWrap>
+              <S.OptionsInput placeholder="재고(필수)" />
+              <S.Text>개</S.Text>
+            </S.OptionsInputWrap>
+            <S.ReceiptCountry onChange={handleSelect} value={Selected}>
+              <S.Option value="비과세" selected="selected">
                 비과세
-              </Option>
-              <Option value="과세">과세</Option>
-            </ReceiptCountry> */}
-          {/* </InputWrap> */}
-          <InputWrap>
-            <OptionsInputWrap>
-              <OptionsInput placeholder="상품 판매가(필수)" />
-              <Text>원</Text>
-            </OptionsInputWrap>
-            <Text>할인율 %</Text>
-            <OptionsInputWrap>
-              <OptionsInput placeholder="상품 판매가(필수)" />
-              <Text>원</Text>
-            </OptionsInputWrap>
-            <OptionsInputWrap>
-              <OptionsInput placeholder="상품" />
-              <Text>원</Text>
-            </OptionsInputWrap>
-            <ReceiptCountry onChange={handleSelect} value={Selected}>
-              <Option value="비과세" selected="selected">
-                비과세
-              </Option>
-              <Option value="과세">과세</Option>
-            </ReceiptCountry>
-          </InputWrap>
-        </InnerSubContent>
-      </InnerContentWrap>
+              </S.Option>
+              <S.Option value="과세">과세</S.Option>
+            </S.ReceiptCountry>
+          </S.InputWrap>
+          <S.AddProductOptionsButtonWrap>
+            <S.AddProductOptionsButton>
+              <S.Span>+</S.Span>추가 옵션 상품 등록
+            </S.AddProductOptionsButton>
+          </S.AddProductOptionsButtonWrap>
+        </S.InnerSubContent>
+        {/* <InnerSubContent detailOptions={detailOptions} /> */}
+        <ProductOptionsButton
+          onClick={onHandleDetailOptions}
+          width="100%"
+          margin="20px 0 40px 0"
+        >
+          + 옵션 추가
+        </ProductOptionsButton>
+      </S.InnerContentWrap>
     </>
   );
 }
 
 export default LayoutInner;
-
-const ButtonWrap = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-`;
-
-const Button = styled.button`
-  margin-bottom: 20px;
-  padding: 6px 26px;
-  color: ${props => props.color};
-  font-size: 16px;
-  line-height: 28px;
-  border: 1px solid ${props => props.borderColor};
-  border-radius: 4px;
-  cursor: pointer;
-  z-index: 100;
-`;
-
-const InnerContentWrap = styled.div`
-  background: #fff;
-  border-radius: 4px;
-  border: 1px solid yellow;
-  margin-bottom: 60px;
-`;
-
-const InnerContent = styled.div`
-  background: #f2f2f2;
-  margin: 10px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-`;
-
-const InnerSubContent = styled.div`
-  height: 500px;
-  padding: 10px;
-  background: #fff;
-  margin: 10px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-`;
-
-const Text = styled.div`
-  padding: 0 15px 0 6px;
-`;
-
-const OptionsNameInput = styled.input`
-  width: 100%;
-  padding: 14px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  font-size: 18px;
-  margin-bottom: 14px;
-`;
-
-const OptionsInputWrap = styled.div`
-  width: 300px;
-  background: yellow;
-`;
-
-const Input = styled.input`
-  display: inline-block;
-  background: blue;
-`;
-const OptionsInput = styled.input`
-  padding: 14px 0;
-  text-align: center;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  font-size: 18px;
-`;
-
-const ReceiptCountry = styled.select.attrs({
-  name: 'country',
-})`
-  padding: 14px;
-  color: #333333;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  border: 1px solid #d3d7e1;
-`;
-
-const Option = styled.option`
-  font-size: 3rem;
-`;
-
-const InputWrap = styled.div`
-  display: flex;
-`;
