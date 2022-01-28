@@ -1,6 +1,7 @@
 import Deadline from './SalesDeadline/Deadline';
 import Expose from './SalesDeadline/Expose';
-import ProductOptionsButton from '../ProductOptions/ProductOptionsButton/ProductOptionsButton';
+import ProductOptionsButton from './ProductOptions/ProductOptionsButton/ProductOptionsButton';
+import ProductOptions from './ProductOptions/ProductOptions';
 
 export const CONTENT = [
   {
@@ -21,5 +22,12 @@ export const CONTENT = [
     title: '노출 및 판매기간 설정',
     subtitle: '상품 노출 기한',
     content: <Expose />,
+    margin: '80px',
+  },
+  {
+    id: 4,
+    title: '상품 옵션',
+    button: <ProductOptionsButton />,
+    content: <ProductOptions />,
   },
 ];

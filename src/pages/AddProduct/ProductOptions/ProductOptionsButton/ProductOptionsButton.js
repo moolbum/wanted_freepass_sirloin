@@ -16,6 +16,7 @@ function ProductOptionsButton({
       bgColor={bgColor}
       align={align}
       {...props}
+      onClick={() => {}}
     >
       {children}
     </Button>

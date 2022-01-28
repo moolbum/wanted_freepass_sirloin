@@ -6,6 +6,7 @@ export const ProductOptions = styled.div`
 
 export const OptionsWrapper = styled.div`
   margin: 0 auto;
+  /* background: red; */
 `;
 
 export const OptionsContent = styled.div`
