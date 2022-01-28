@@ -19,9 +19,7 @@ function ContentLayout({ title, subtitle, content, margin, button, border }) {
               <S.InnerContent>{content}</S.InnerContent>
             </>
           ) : (
-            <S.NoSubTitleWrap>
-              <S.NoSubTitleContent>{content}</S.NoSubTitleContent>
-            </S.NoSubTitleWrap>
+            <S.NoSubTitleContent>{content}</S.NoSubTitleContent>
           )}
         </S.ContentWrapper>
       </S.CardContent>
