@@ -1,5 +1,5 @@
 import React from 'react';
-import Radio from 'components/Radio/index';
+import Input from 'components/Input/index';
 import { PRODUCT_EXPOSE } from './data';
 import Calendar from 'components/Calendar';
 import { useInputChecked } from 'hooks/useInputChecked/useInputChecked';
@@ -15,11 +15,11 @@ const Expose = () => {
     <div>
       {PRODUCT_EXPOSE.map(data => {
         return (
-          <Radio
+          <Input
             key={data.id}
+            type="radio"
             name={data.name}
             value={data.value}
-            onChange={inputCheckedValue}
           />
         );
       })}

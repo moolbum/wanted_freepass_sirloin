@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as S from './Toggle.style';
 
-function Toggle() {
-  const [isOn, setIsOn] = useState(false);
-
-  const handleToggle = () => {
-    setIsOn(!isOn);
-  };
-
+function Toggle({ checked, onChange }) {
   return (
     <S.ToggleWrapper>
       <S.ToggleInput
         id="checkbox"
         type="checkbox"
-        checked={isOn}
-        onChange={handleToggle}
+        checked={checked}
+        onChange={onChange}
       />
       <S.ToggleLabel htmlFor="checkbox" />
     </S.ToggleWrapper>

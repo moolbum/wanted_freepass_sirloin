@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import Radio from 'components/Radio';
+import React from 'react';
+import Input from 'components/Input';
 import { PRODUCT_SELLING } from './data';
 import Calendar from 'components/Calendar/Calendar';
 import { useInputChecked } from 'hooks/useInputChecked/useInputChecked';
@@ -9,21 +9,18 @@ const Expose = () => {
   const [radio, inputCheckedValue] = useInputChecked();
   const [value, checkedDate] = useCheckedDate();
 
-  useEffect(() => {
-    console.log('판매기한>>>>>', value);
-  }, [value]);
-
+  console.log('판매기한>>>>>', value);
   console.log(radio);
 
   return (
     <div>
       {PRODUCT_SELLING.map(data => {
         return (
-          <Radio
+          <Input
             key={data.id}
+            type="radio"
             name={data.name}
             value={data.value}
-            onChange={inputCheckedValue}
           />
         );
       })}
