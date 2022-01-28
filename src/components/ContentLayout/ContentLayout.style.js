@@ -23,6 +23,7 @@ export const CardTitleWrap = styled.div`
 export const ContentWrapper = styled.div`
   display: flex;
   width: 100%;
+  border-bottom: 1px solid ${({ theme }) => theme.gray};
 `;
 
 export const ContentTitleWrap = styled.div`

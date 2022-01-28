@@ -5,29 +5,23 @@ import ProductOptions from './ProductOptions/ProductOptions';
 
 export const CONTENT = [
   {
-    id: 1,
+    id: 0,
     title: '노출 및 판매기간 설정',
     subtitle: '상품 노출 기한',
     content: <Expose />,
     border: '0px',
   },
   {
-    id: 2,
-    subtitle: '상품 판매 기한',
+    id: 1,
+    subtitle: '상품 노출 기한',
     content: <Deadline />,
     margin: '80px',
+    border: '0px',
   },
   {
-    id: 3,
+    id: 2,
     title: '노출 및 판매기간 설정',
-    subtitle: '상품 노출 기한',
     content: <Expose />,
-    margin: '80px',
-  },
-  {
-    id: 4,
-    title: '상품 옵션',
-    button: <ProductOptionsButton />,
-    content: <ProductOptions />,
+    border: '0px',
   },
 ];

@@ -1,7 +1,7 @@
 import React from 'react';
-import Radio from '../../../../utils/Radio';
+import Radio from '../../../../components/Radio';
 import { PRODUCT_SELLING } from './data';
-import Calendar from '../../../../utils/Calendar/Calendar';
+import Calendar from '../../../../components/Calendar/Calendar';
 
 const Expose = () => {
   return (
