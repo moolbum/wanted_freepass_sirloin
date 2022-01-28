@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const ToggleWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin-left: -40px;
 `;
 
 export const ToggleLabel = styled.label`
