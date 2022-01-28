@@ -2,7 +2,7 @@ const theme = {
   gray: '#ddd',
   blue: '#0066cc',
 
-  flex: (direction = 'row', align = 'center', justify = 'center') => `
+  flex: (align = 'center', justify = 'center', direction = 'row') => `
     display: flex;
     flex-direction: ${direction};
     align-items: ${align};
