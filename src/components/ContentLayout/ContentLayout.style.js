@@ -46,7 +46,8 @@ export const NoSubTitleWrap = styled.div`
 `;
 
 export const NoSubTitleContent = styled.div`
-  margin: 50px 30px;
+  padding: 50px;
+  margin: 0 auto;
 `;
 
 export const Button = styled.button`
