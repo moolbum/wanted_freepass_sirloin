@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './pages/Main/Main';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './styles/GlobalStyle';
 import theme from './styles/theme';
+import AddProduct from './pages/AddProduct/AddProduct';
 
 ReactDOM.render(
   <>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
-      <Main />
+      <AddProduct />
     </ThemeProvider>
   </>,
   document.getElementById('root')

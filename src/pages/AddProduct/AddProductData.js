@@ -15,7 +15,7 @@ export const CONTENT = [
   },
   {
     id: 1,
-    subtitle: '상품 노출 기한',
+    subtitle: '상품 판매 기한',
     content: <Deadline />,
     margin: '80px',
     border: '0px',
@@ -53,8 +53,7 @@ export const CONTENT = [
   },
   {
     id: 7,
-    title: '상품 대표 이미지',
-    subtitle: '카테고리',
+    subtitle: '상품 대표 이미지',
     content: <Deadline />,
     border: '0px',
   },
@@ -82,6 +81,7 @@ export const CONTENT = [
     id: 11,
     subtitle: '선 주문 예약 배송',
     content: <ProductDelivery />,
+    margin: '80px',
     border: '0px',
   },
   {
