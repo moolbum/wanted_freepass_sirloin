@@ -30,4 +30,6 @@ function AddProduct() {
 
 export default AddProduct;
 
-const AddProductContainer = styled.div``;
+const AddProductContainer = styled.div`
+  width: 100%;
+`;

@@ -3,6 +3,7 @@ import Expose from './SalesDeadline/Expose';
 import ProductOptionsButton from './ProductOptions/ProductOptionsButton/ProductOptionsButton';
 import ProductOptions from './ProductOptions/ProductOptions';
 import ProductDelivery from './ProductDelivery';
+import Categories from './ProductInfos/Categories/Categories';
 
 export const CONTENT = [
   {
@@ -23,7 +24,7 @@ export const CONTENT = [
     id: 2,
     title: '상품 기본 정보',
     subtitle: '카테고리',
-    content: <Deadline />,
+    content: <Categories />,
     border: '0px',
   },
   {

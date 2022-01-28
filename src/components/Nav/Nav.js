@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import NAV_LIST from './data';
+import { NAV_LIST } from './data';
 
 function Nav() {
   return (
@@ -31,8 +31,10 @@ const Logo = styled.h1`
 
 const UnorderedList = styled.ul`
   font-size: 16px;
+  margin: 10px;
 `;
 
 const List = styled.li`
   font-size: 16px;
+  padding: 0 10px 10px;
 `;
