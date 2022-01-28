@@ -1,5 +1,5 @@
 const theme = {
-  gray: '#a2a2a2',
+  gray: '#ddd',
   blue: '#0066cc',
 
   flex: (direction = 'row', align = 'center', justify = 'center') => `

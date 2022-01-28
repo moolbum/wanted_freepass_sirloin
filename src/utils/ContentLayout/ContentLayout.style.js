@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid ${({ theme }) => theme.gray};
   font-size: 20px;
 `;
 
@@ -17,7 +17,7 @@ export const CardTitleWrap = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid ${({ theme }) => theme.gray};
 `;
 
 export const ContentWrapper = styled.div`
@@ -28,7 +28,7 @@ export const ContentWrapper = styled.div`
 export const ContentTitleWrap = styled.div`
   padding-right: 6%;
   background: #f5f5f5;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid ${({ theme }) => theme.gray};
 `;
 
 export const ContentTitle = styled.div`
@@ -37,6 +37,16 @@ export const ContentTitle = styled.div`
 
 export const InnerContent = styled.div`
   margin: 20px;
+`;
+
+export const NoSubTitleWrap = styled.div`
+  width: 100%;
+  background: #f5f5f5;
+`;
+
+export const NoSubTitleContent = styled.div`
+  margin: 50px 30px;
+  /* background: yellow; */
 `;
 
 export const Button = styled.button`
