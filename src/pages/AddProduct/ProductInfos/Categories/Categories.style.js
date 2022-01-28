@@ -6,6 +6,7 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
+  width: 400px;
   height: 300px;
   margin-right: 50px;
   padding: 30px 150px 30px 30px;

@@ -6,16 +6,24 @@ import { CATEGORIES } from './data';
 const Categories = () => {
   const [categories, setCategories] = useState([]);
 
-  // const isChecked = e => {
-  //   const checked = e.target.checked;
-  //   console.log('check!!!');
-  // };
+  const isChecked = e => {
+    const checked = e.target.checked;
+    // setCategories(prev => prev.push());
+    console.log('check!!!', checked);
+  };
 
   return (
     <S.Container>
       <S.Wrapper>
         {CATEGORIES.map(data => {
-          return <Radio key={data.id} name={data.name} value={data.value} />;
+          return (
+            <Radio
+              key={data.id}
+              name={data.name}
+              value={data.value}
+              onChange={isChecked}
+            />
+          );
         })}
       </S.Wrapper>
       <S.Wrapper>
