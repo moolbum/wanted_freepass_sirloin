@@ -69,6 +69,7 @@ export const CONTENT = [
     id: 9,
     title: '상품 옵션',
     content: <ProductOptions />,
+    margin: '80px',
     border: '0px',
   },
   {
