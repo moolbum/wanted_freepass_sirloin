@@ -28,4 +28,4 @@ const Expose = () => {
   );
 };
 
-export default Expose;
+export default React.memo(Expose);

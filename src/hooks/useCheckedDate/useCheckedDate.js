@@ -6,5 +6,6 @@ export const useCheckedDate = () => {
   const checkedDate = newValue => {
     setValue(newValue);
   };
+
   return [value, checkedDate];
 };

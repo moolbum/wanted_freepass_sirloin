@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Radio from 'components/Radio';
 import { PRODUCT_SELLING } from './data';
 import Calendar from 'components/Calendar/Calendar';
@@ -8,8 +8,12 @@ import { useCheckedDate } from 'hooks/useCheckedDate/useCheckedDate';
 const Expose = () => {
   const [radio, inputCheckedValue] = useInputChecked();
   const [value, checkedDate] = useCheckedDate();
+
+  useEffect(() => {
+    console.log('판매기한>>>>>', value);
+  }, [value]);
+
   console.log(radio);
-  console.log('판매기한>>>>>', value);
 
   return (
     <div>
@@ -28,4 +32,4 @@ const Expose = () => {
   );
 };
 
-export default Expose;
+export default React.memo(Expose);

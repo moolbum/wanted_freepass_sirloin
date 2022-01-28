@@ -30,7 +30,7 @@ function AddProduct() {
   );
 }
 
-export default AddProduct;
+export default React.memo(AddProduct);
 
 const AddProductContainer = styled.div`
   padding: 100px 50px 50px 50px;
