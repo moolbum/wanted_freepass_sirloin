@@ -10,7 +10,7 @@ const Expose = () => {
   const radioCheckedValue = e => {
     const { value, checked } = e.target;
     if (checked) {
-      setRadio(value);
+      setRadio(e.currentTarget);
     }
   };
 
@@ -24,7 +24,8 @@ const Expose = () => {
             key={data.id}
             name={data.name}
             value={data.value}
-            onClick={radioCheckedValue}
+            onChange={radioCheckedValue}
+            // onClick={radioCheckedValue}
           />
         );
       })}
