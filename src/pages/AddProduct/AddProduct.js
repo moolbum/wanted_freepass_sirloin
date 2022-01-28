@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContentLayout from '../../components/ContentLayout';
+import Nav from './Nav/Nav';
 
 import { CONTENT } from './AddProductData';
 
 function AddProduct() {
   return (
-    <div>
+    <>
+      <Nav />
       <AddProductContainer>
         {CONTENT.map(
           ({ id, title, content, margin, button, border, subtitle }) => {
@@ -24,10 +26,12 @@ function AddProduct() {
           }
         )}
       </AddProductContainer>
-    </div>
+    </>
   );
 }
 
 export default AddProduct;
 
-const AddProductContainer = styled.div``;
+const AddProductContainer = styled.div`
+  padding: 100px 50px 50px 50px;
+`;
