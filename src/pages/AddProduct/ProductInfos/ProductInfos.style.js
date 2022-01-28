@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-export const ProductOptions = styled.div`
+export const ProductInfos = styled.div`
   margin: 50px 30px;
 `;
 
-export const OptionsWrapper = styled.div`
+export const InfosWrapper = styled.div`
   margin: 0 auto;
   /* background: red; */
 `;
 
-export const OptionsContent = styled.div`
+export const InfosContent = styled.div`
   text-align: center;
   color: #333;
 `;
