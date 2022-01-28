@@ -15,7 +15,7 @@ const Nav = () => {
           children="저장하기"
           bgColor={props => props.theme.blue}
           borderColor={props => props.theme.blue}
-          color={props => props.theme.white}
+          color="#fff"
           style={{ marginRight: '50px' }}
           onClick={submit}
         />
