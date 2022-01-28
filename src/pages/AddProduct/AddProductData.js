@@ -46,7 +46,7 @@ export const CONTENT = [
     border: '0px',
   },
   {
-    id: 3,
+    id: 6,
     title: '상품 옵션',
     content: <ProductOptions />,
     border: '0px',

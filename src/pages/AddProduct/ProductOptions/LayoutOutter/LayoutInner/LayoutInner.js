@@ -62,7 +62,7 @@ function LayoutInner() {
             </S.AddProductOptionsButton>
           </S.AddProductOptionsButtonWrap>
         </S.InnerSubContent> */}
-        <InnerSubContent detailOptions={detailOptions} />
+        {/* <InnerSubContent detailOptions={detailOptions} /> */}
         <ProductOptionsButton
           onClick={onHandleDetailOptions}
           width="100%"

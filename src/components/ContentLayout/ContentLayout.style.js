@@ -46,6 +46,7 @@ export const NoSubTitleWrap = styled.div`
 `;
 
 export const NoSubTitleContent = styled.div`
+  width: 100%;
   padding: 50px;
   margin: 0 auto;
 `;

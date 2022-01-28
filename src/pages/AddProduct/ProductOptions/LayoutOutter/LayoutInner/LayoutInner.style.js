@@ -32,6 +32,7 @@ export const InnerContent = styled.div`
   background: #f2f2f2;
   border-radius: 4px;
   border: 1px solid #ddd;
+  text-align: center;
 `;
 
 export const InnerSubContent = styled.div`
