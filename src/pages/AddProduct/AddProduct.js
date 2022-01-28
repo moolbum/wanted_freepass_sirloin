@@ -6,23 +6,25 @@ import { CONTENT } from './AddProductData';
 
 function AddProduct() {
   return (
-    <AddProductContainer>
-      {CONTENT.map(
-        ({ id, title, content, margin, button, border, subtitle }) => {
-          return (
-            <ContentLayout
-              key={id}
-              title={title}
-              subtitle={subtitle}
-              content={content}
-              margin={margin}
-              button={button}
-              border={border}
-            />
-          );
-        }
-      )}
-    </AddProductContainer>
+    <div>
+      <AddProductContainer>
+        {CONTENT.map(
+          ({ id, title, content, margin, button, border, subtitle }) => {
+            return (
+              <ContentLayout
+                key={id}
+                title={title}
+                subtitle={subtitle}
+                content={content}
+                margin={margin}
+                button={button}
+                border={border}
+              />
+            );
+          }
+        )}
+      </AddProductContainer>
+    </div>
   );
 }
 
