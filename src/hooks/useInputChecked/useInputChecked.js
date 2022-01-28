@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const useInputChecked = e => {
+export const useInputChecked = () => {
   const [radio, setRadio] = useState();
 
   const inputCheckedValue = e => {
