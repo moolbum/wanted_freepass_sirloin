@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import ContentLayout from '../../components/ContentLayout';
-import Nav from './Nav/Nav';
+import ContentLayout from 'components/ContentLayout';
+import Nav from './Nav';
 
 import { CONTENT } from './AddProductData';
 
@@ -30,7 +30,7 @@ function AddProduct() {
   );
 }
 
-export default AddProduct;
+export default React.memo(AddProduct);
 
 const AddProductContainer = styled.div`
   padding: 100px 50px 50px 50px;
