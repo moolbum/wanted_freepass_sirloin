@@ -7,6 +7,7 @@ function ProductOptionsButton({
   borderColor,
   bgColor,
   align,
+  onClick,
   ...props
 }) {
   return (
@@ -16,7 +17,8 @@ function ProductOptionsButton({
       bgColor={bgColor}
       align={align}
       {...props}
-      onClick={() => {}}
+      // onClick={() => {}}
+      onClick={onClick}
     >
       {children}
     </Button>
