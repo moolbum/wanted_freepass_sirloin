@@ -1,19 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
-import ContentLayout from '../../utils/ContentLayout';
-import Toggle from '../../utils/Toggle/index';
-import SalesPeriod from './SalesPeriod/index';
+import ContentLayout from '../../components/ContentLayout';
+import Toggle from '../../components/Toggle';
+
+import { CONTENT } from './AddProductData';
 
 function AddProduct() {
   return (
-    <AddProductContainer>
-      <ContentLayout
-        title="노출 및 판매기간 설정"
-        subtitle="상품 노출 기한"
-        content={<SalesPeriod />}
-      />
+    <>
       <Toggle />
-    </AddProductContainer>
+      <AddProductContainer>
+        {CONTENT.map(
+          ({ id, title, content, margin, button, border, subtitle }) => {
+            return (
+              <ContentLayout
+                key={id}
+                title={title}
+                subtitle={subtitle}
+                content={content}
+                margin={margin}
+                button={button}
+                border={border}
+              />
+            );
+          }
+        )}
+      </AddProductContainer>
+    </>
   );
 }
 

@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-const CheckBoxWrapper = styled.div`
-  position: relative;
-`;
-const CheckBoxLabel = styled.label`
+export const CheckBoxLabel = styled.label`
   position: absolute;
   top: 0;
   left: 0;
@@ -13,7 +10,7 @@ const CheckBoxLabel = styled.label`
   background: #bebebe;
   cursor: pointer;
   &::after {
-    content: "";
+    content: '';
     display: block;
     border-radius: 50%;
     width: 18px;
@@ -24,16 +21,17 @@ const CheckBoxLabel = styled.label`
     transition: 0.2s;
   }
 `;
-const CheckBox = styled.input`
+
+export const CheckBox = styled.input`
   opacity: 0;
   z-index: 1;
   border-radius: 15px;
   width: 42px;
   height: 26px;
   &:checked + ${CheckBoxLabel} {
-    background:  ${({ theme }) => theme.blue};;
+    background: #4fbe79;
     &::after {
-      content: "";
+      content: '';
       display: block;
       border-radius: 50%;
       width: 18px;
@@ -42,6 +40,4 @@ const CheckBox = styled.input`
       transition: 0.2s;
     }
   }
-`;
-
 `;

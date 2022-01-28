@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Label = styled.label`
-  ${props => props.theme.flex('center', 'center', 'row')}
+  ${props => props.theme.flex('center', 'flex-start', 'row')}
 `;
 
 export const Text = styled.p`
