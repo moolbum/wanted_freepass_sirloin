@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ContentLayout from '../../components/ContentLayout';
+import ContentLayout from 'components/ContentLayout';
 import Nav from './Nav';
 
 import { CONTENT } from './AddProductData';

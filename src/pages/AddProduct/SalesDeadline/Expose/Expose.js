@@ -1,19 +1,11 @@
-import React, { useState } from 'react';
-import Radio from '../../../../components/Radio/index';
+import React from 'react';
+import Radio from 'components/Radio/index';
 import { PRODUCT_EXPOSE } from './data';
-import Calendar from '../../../../components/Calendar';
-// import { useSalesRadio } from '../../../../utils/SalesRadio/SalesRadio';
+import Calendar from 'components/Calendar';
+import { useInputChecked } from 'hooks/useInputChecked/useInputChecked';
 
 const Expose = () => {
-  const [radio, setRadio] = useState();
-
-  const radioCheckedValue = e => {
-    const { value, checked } = e.target;
-    if (checked) {
-      setRadio(e.currentTarget);
-    }
-  };
-
+  const [radio, inputCheckedValue] = useInputChecked();
   console.log(radio);
 
   return (
@@ -24,8 +16,7 @@ const Expose = () => {
             key={data.id}
             name={data.name}
             value={data.value}
-            onChange={radioCheckedValue}
-            // onClick={radioCheckedValue}
+            onChange={inputCheckedValue}
           />
         );
       })}
