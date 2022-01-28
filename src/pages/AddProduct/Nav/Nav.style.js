@@ -14,7 +14,7 @@ export const NavWrap = styled.div`
   padding: 15px 0;
   background-color: #fff;
   border-bottom: 1px solid ${({ theme }) => theme.gray};
-  z-index: 100;
+  z-index: 101;
   box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.1);
 `;
 
