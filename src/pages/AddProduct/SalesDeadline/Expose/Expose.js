@@ -2,7 +2,7 @@ import React from 'react';
 import Radio from '../../../../utils/Radio/index';
 // import * as S from './Expose.style';
 import { PRODUCT_EXPOSE } from './data';
-import Calender from '../../../../utils/Calender/index';
+import Calendar from '../../../../utils/Calendar';
 
 const Expose = () => {
   return (
@@ -10,7 +10,7 @@ const Expose = () => {
       {PRODUCT_EXPOSE.map(data => {
         return <Radio key={data.id} name={data.name} value={data.value} />;
       })}
-      <Calender />
+      <Calendar />
     </div>
   );
 };
