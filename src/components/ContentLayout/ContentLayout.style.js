@@ -17,7 +17,8 @@ export const CardTitleWrap = styled.div`
   justify-content: space-between;
   width: 100%;
   border-top: none;
-  border: 1px solid ${({ theme }) => theme.gray};
+  border-top: 1px solid ${({ theme }) => theme.gray};
+  border-bottom: 1px solid ${({ theme }) => theme.gray};
 `;
 
 export const ContentWrapperBorder = styled.div`
