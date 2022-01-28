@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContentLayout from '../../components/ContentLayout';
-import Toggle from '../../components/Toggle';
 
 import { CONTENT } from './AddProductData';
 
 function AddProduct() {
   return (
-    <>
-      <Toggle />
+    <div>
       <AddProductContainer>
         {CONTENT.map(
           ({ id, title, content, margin, button, border, subtitle }) => {
@@ -26,7 +24,7 @@ function AddProduct() {
           }
         )}
       </AddProductContainer>
-    </>
+    </div>
   );
 }
 

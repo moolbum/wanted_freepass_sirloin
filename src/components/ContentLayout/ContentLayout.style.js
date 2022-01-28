@@ -27,7 +27,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const ContentTitleWrap = styled.div`
-  padding-right: 6%;
+  width: 220px;
   background: #f5f5f5;
   border-right: 1px solid ${({ theme }) => theme.gray};
 `;
@@ -47,7 +47,6 @@ export const NoSubTitleWrap = styled.div`
 
 export const NoSubTitleContent = styled.div`
   margin: 50px 30px;
-  /* background: yellow; */
 `;
 
 export const Button = styled.button`
