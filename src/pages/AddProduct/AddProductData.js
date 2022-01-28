@@ -24,4 +24,11 @@ export const CONTENT = [
     content: <Expose />,
     border: '0px',
   },
+  {
+    id: 3,
+    title: '상품 옵션',
+    content: <ProductOptions />,
+    border: '0px',
+    button: <ProductOptionsButton />,
+  },
 ];
