@@ -41,7 +41,6 @@ export const InnerSubContent = styled.div`
   background: #fff;
   border-radius: 4px;
   border: 1px solid #ddd;
-  background: red;
 `;
 
 export const Text = styled.p`

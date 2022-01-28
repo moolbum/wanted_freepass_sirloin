@@ -4,11 +4,11 @@ import ProductOptionsButton from '../../ProductOptionsButton/ProductOptionsButto
 import InnerSubContent from './InnerSubContent/InnerSubContent';
 
 function LayoutInner() {
-  // const [Selected, setSelected] = useState('비과세');
-  // const handleSelect = e => {
-  //   setSelected(e.target.value);
-  //   console.log(e.target.value);
-  // };
+  const [Selected, setSelected] = useState('비과세');
+  const handleSelect = e => {
+    setSelected(e.target.value);
+    console.log(e.target.value);
+  };
 
   const [detailOptions, setDetailOptions] = useState([]);
 
@@ -33,7 +33,7 @@ function LayoutInner() {
             + 이미지 첨부
           </ProductOptionsButton>
         </S.InnerContent>
-        {/* <S.InnerSubContent>
+        <S.InnerSubContent>
           <S.OptionsNameInput placeholder="옵션명을 입력해주세요. (필수)" />
           <S.InputWrap>
             <S.OptionsInputWrap>
@@ -61,7 +61,7 @@ function LayoutInner() {
               <S.Span>+</S.Span>추가 옵션 상품 등록
             </S.AddProductOptionsButton>
           </S.AddProductOptionsButtonWrap>
-        </S.InnerSubContent> */}
+        </S.InnerSubContent>
         {/* <InnerSubContent detailOptions={detailOptions} /> */}
         <ProductOptionsButton
           onClick={onHandleDetailOptions}

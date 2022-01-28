@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
   width: 100%;
-  border: 1px solid ${({ theme }) => theme.gray};
   font-size: 20px;
 `;
 
@@ -17,7 +16,13 @@ export const CardTitleWrap = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.gray};
+  border-top: none;
+  border: 1px solid ${({ theme }) => theme.gray};
+`;
+
+export const ContentWrapperBorder = styled.div`
+  border-right: 1px solid ${({ theme }) => theme.gray};
+  border-left: 1px solid ${({ theme }) => theme.gray};
 `;
 
 export const ContentWrapper = styled.div`
