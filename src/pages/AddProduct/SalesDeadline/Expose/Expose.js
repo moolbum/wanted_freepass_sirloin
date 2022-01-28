@@ -20,6 +20,7 @@ const Expose = () => {
             type="radio"
             name={data.name}
             value={data.value}
+            onChange={inputCheckedValue}
           />
         );
       })}

@@ -9,3 +9,13 @@ export const useCheckedDate = () => {
 
   return [value, checkedDate];
 };
+
+export const useCheckedDateBasic = () => {
+  const [basicValue, setBasicValue] = useState(null);
+
+  const CheckedDateBasic = newValue => {
+    setBasicValue(newValue);
+  };
+
+  return [basicValue, CheckedDateBasic];
+};

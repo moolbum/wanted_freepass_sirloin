@@ -28,7 +28,7 @@ export default function Calendar({ value, checkedDate }) {
   );
 }
 
-export function CalendarBasic({ value, checkedDate }) {
+export function CalendarBasic({ value, CheckedDateBasic }) {
   const CalendarStyle = {
     margin: '20px 0',
   };
@@ -36,7 +36,7 @@ export function CalendarBasic({ value, checkedDate }) {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DatePicker
         value={value}
-        onChange={checkedDate}
+        onChange={CheckedDateBasic}
         renderInput={params => <TextField {...params} sx={CalendarStyle} />}
       />
     </LocalizationProvider>
