@@ -17,9 +17,9 @@ function ProductOptions() {
     console.log(counter);
   };
 
-  const onRemove = counter => {
-    setCountList(countList.filter(countList => countList.counter !== counter));
-  };
+  // const onRemove = counter => {
+  //   setCountList(countList.filter(countList => countList.counter !== counter));
+  // };
   return (
     <S.ProductOptions>
       <S.OptionsWrapper>
@@ -32,7 +32,7 @@ function ProductOptions() {
         <button type="submit" onClick={onAddDetailDiv}>
           추가
         </button>
-        <LayoutOutter onRemove={onRemove} countList={countList} />
+        <LayoutOutter countList={countList} />
       </S.OptionsWrapper>
     </S.ProductOptions>
   );
