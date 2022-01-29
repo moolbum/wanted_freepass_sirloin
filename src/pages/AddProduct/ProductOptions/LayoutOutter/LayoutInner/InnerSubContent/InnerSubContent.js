@@ -3,12 +3,6 @@ import styled from 'styled-components';
 import InnerContent from './InnerContent/InnerContent';
 
 function InnerSubContent({ detailOptions }) {
-  // const [Selected, setSelected] = useState('비과세');
-  // const handleSelect = e => {
-  //   setSelected(e.target.value);
-  //   console.log(e.target.value);
-  // };
-
   return (
     <Wrap detailOptions={detailOptions}>
       {detailOptions &&

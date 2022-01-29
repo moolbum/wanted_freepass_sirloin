@@ -44,12 +44,11 @@ function InnerContent() {
 export default InnerContent;
 
 const InnerSubContent = styled.form`
-  /* height: 500px; */
   padding: 10px;
+  margin-bottom: 20px;
   background: #fff;
   border-radius: 4px;
   border: 1px solid #ddd;
-  background: red;
 `;
 
 const Text = styled.p`

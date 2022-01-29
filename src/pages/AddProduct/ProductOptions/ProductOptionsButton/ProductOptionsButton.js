@@ -21,7 +21,6 @@ function ProductOptionsButton({
       bgColor={bgColor}
       align={align}
       {...props}
-      // onClick={() => {}}
       onClick={onClick}
     >
       {children}
@@ -32,7 +31,6 @@ function ProductOptionsButton({
 export default ProductOptionsButton;
 
 const Button = styled.button`
-  /* width: 100%; */
   margin: ${props => props.margin};
   padding: 6px 26px;
   color: ${props => props.color};
