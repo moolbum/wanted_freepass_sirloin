@@ -6,6 +6,8 @@ import Nav from './Nav';
 import { CONTENT } from './AddProductData';
 
 function AddProduct() {
+<<<<<<< HEAD
+=======
   const [result, setResult] = useState({
     name: '',
   });
@@ -15,6 +17,7 @@ function AddProduct() {
     setResult({ ...result, [name]: value });
   };
 
+>>>>>>> master
   return (
     <>
       <Nav />
@@ -30,8 +33,6 @@ function AddProduct() {
                 margin={margin}
                 button={button}
                 border={border}
-                result={result}
-                contentResult={contentResult}
               />
             );
           }

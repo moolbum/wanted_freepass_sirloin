@@ -1,7 +1,12 @@
 {
   "id": 0,
+<<<<<<< HEAD
+  "expose": { "expose": "", "date": [] },
+  "deadline": { "deadline": "", "date": [] },
+=======
   "expose": { "expose": "", "date": "" },
   "deadline": { "deadline": "", "date": "" },
+>>>>>>> master
   "categories": [],
   "filter_tag": [],
   "product_name": { "name": "", "code": "" },
