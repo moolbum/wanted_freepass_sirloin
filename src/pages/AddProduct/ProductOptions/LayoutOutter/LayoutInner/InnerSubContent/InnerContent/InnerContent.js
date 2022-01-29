@@ -43,7 +43,7 @@ function InnerContent() {
 
 export default InnerContent;
 
-const InnerSubContent = styled.div`
+const InnerSubContent = styled.form`
   padding: 10px;
   margin-bottom: 20px;
   background: #fff;

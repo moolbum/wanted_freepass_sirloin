@@ -4,7 +4,15 @@ import ProductOptionsButton from '../../pages/AddProduct/ProductOptions/ProductO
 import ProductOptions from '../../pages/AddProduct/ProductOptions/ProductOptions';
 import LayoutInner from '../../pages/AddProduct/ProductOptions/LayoutOutter/LayoutInner';
 
-function ContentLayout({ title, subtitle, content, margin, button, border }) {
+function ContentLayout({
+  title,
+  subtitle,
+  content,
+  margin,
+  button,
+  result,
+  contentResult,
+}) {
   const [countList, setCountList] = useState([]);
 
   const onAddDetailDiv = () => {
@@ -18,43 +26,46 @@ function ContentLayout({ title, subtitle, content, margin, button, border }) {
     console.log(counter);
   };
 
+  console.log(result);
+
   return (
     <div style={{ marginBottom: margin }}>
-      <S.Card>
-        <S.CardContent>
-          <S.ContentWrapperBorder>
-            {title && (
-              <S.CardTitleWrap>
-                {title && <S.CardTitle>{title}</S.CardTitle>}
-                {button && (
-                  // <S.Button onClick={onAddDetailDiv}>+ 옵션 세트 추가</S.Button>
-                  <ProductOptionsButton
-                    children="+ 옵션 세트 추가"
-                    onClick={onAddDetailDiv}
-                    color={props => props.theme.blue}
-                  />
-                )}
-              </S.CardTitleWrap>
-            )}
-            <S.ContentWrapper>
-              {subtitle ? (
-                <>
-                  <S.ContentTitleWrap>
-                    <S.ContentTitle>{subtitle}</S.ContentTitle>
-                  </S.ContentTitleWrap>
-                  <S.InnerContent>{content}</S.InnerContent>
-                </>
-              ) : (
-                <S.NoSubTitleContent>
-                  <ProductOptions countList={countList} />
-                </S.NoSubTitleContent>
+      {content && (
+        <S.Card>
+          <S.CardContent>
+            <S.ContentWrapperBorder>
+              {title && (
+                <S.CardTitleWrap>
+                  {title && <S.CardTitle>{title}</S.CardTitle>}
+                  {button && (
+                    <ProductOptionsButton
+                      children="+ 옵션 세트 추가"
+                      onClick={onAddDetailDiv}
+                      color="#0066cc"
+                    />
+                  )}
+                </S.CardTitleWrap>
               )}
-            </S.ContentWrapper>
-          </S.ContentWrapperBorder>
-        </S.CardContent>
-      </S.Card>
+              <S.ContentWrapper onChange={contentResult}>
+                {subtitle ? (
+                  <>
+                    <S.ContentTitleWrap>
+                      <S.ContentTitle>{subtitle}</S.ContentTitle>
+                    </S.ContentTitleWrap>
+                    <S.InnerContent>{content}</S.InnerContent>
+                  </>
+                ) : (
+                  <S.NoSubTitleContent>
+                    <ProductOptions countList={countList} />
+                  </S.NoSubTitleContent>
+                )}
+              </S.ContentWrapper>
+            </S.ContentWrapperBorder>
+          </S.CardContent>
+        </S.Card>
+      )}
     </div>
   );
 }
 
-export default ContentLayout;
+export default React.memo(ContentLayout);

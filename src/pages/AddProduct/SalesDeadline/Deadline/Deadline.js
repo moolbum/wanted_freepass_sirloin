@@ -5,12 +5,9 @@ import Calendar from 'components/Calendar/Calendar';
 import { useInputChecked } from 'hooks/useInputChecked/useInputChecked';
 import { useCheckedDate } from 'hooks/useCheckedDate/useCheckedDate';
 
-const Expose = () => {
+const Deadline = () => {
   const [radio, inputCheckedValue] = useInputChecked();
   const [value, checkedDate] = useCheckedDate();
-
-  console.log('판매기한>>>>>', value);
-  console.log(radio);
 
   return (
     <div>
@@ -25,9 +22,9 @@ const Expose = () => {
           />
         );
       })}
-      <Calendar value={value} checkedDate={checkedDate} />
+      <Calendar value={value} checkedDate={checkedDate} name="sale" />
     </div>
   );
 };
 
-export default React.memo(Expose);
+export default React.memo(Deadline);

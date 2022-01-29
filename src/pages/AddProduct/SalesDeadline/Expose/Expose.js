@@ -8,8 +8,6 @@ import { useCheckedDate } from 'hooks/useCheckedDate/useCheckedDate';
 const Expose = () => {
   const [radio, inputCheckedValue] = useInputChecked();
   const [value, checkedDate] = useCheckedDate();
-  console.log(radio);
-  console.log('노출기한>>>>>', value);
 
   return (
     <div>

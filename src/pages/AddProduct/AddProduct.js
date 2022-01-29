@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import ContentLayout from 'components/ContentLayout';
 import Nav from './Nav';
@@ -6,6 +6,17 @@ import Nav from './Nav';
 import { CONTENT } from './AddProductData';
 
 function AddProduct() {
+  const [result, setResult] = useState({
+    name: '',
+  });
+
+  const contentResult = e => {
+    const { value, name } = e.target;
+    setResult({
+      [name]: value,
+    });
+  };
+
   return (
     <>
       <Nav />
@@ -21,6 +32,8 @@ function AddProduct() {
                 margin={margin}
                 button={button}
                 border={border}
+                result={result}
+                contentResult={contentResult}
               />
             );
           }
