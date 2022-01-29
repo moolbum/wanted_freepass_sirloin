@@ -19,7 +19,7 @@ function ContentLayout({ title, subtitle, content, margin, button, border }) {
   };
 
   return (
-    <div style={{ marginBottom: margin /*borderBottom: border*/ }}>
+    <div style={{ marginBottom: margin }}>
       <S.Card>
         <S.CardContent>
           <S.ContentWrapperBorder>
@@ -27,7 +27,12 @@ function ContentLayout({ title, subtitle, content, margin, button, border }) {
               <S.CardTitleWrap>
                 {title && <S.CardTitle>{title}</S.CardTitle>}
                 {button && (
-                  <S.Button onClick={onAddDetailDiv}>+ 옵션 세트 추가</S.Button>
+                  // <S.Button onClick={onAddDetailDiv}>+ 옵션 세트 추가</S.Button>
+                  <ProductOptionsButton
+                    children="+ 옵션 세트 추가"
+                    onClick={onAddDetailDiv}
+                    color={props => props.theme.blue}
+                  />
                 )}
               </S.CardTitleWrap>
             )}
