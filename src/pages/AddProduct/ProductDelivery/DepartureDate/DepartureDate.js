@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import Toggle from '../../../../components/Toggle';
+import Toggle from 'components/Toggle';
 
 function DepartureDate() {
-  const [isOn, setIsOn] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
-    setIsOn(!isOn);
+    toggle ? setToggle(false) : setToggle(true);
   };
 
   return (
     <div>
-      <Toggle checked={isOn} onChange={handleToggle} />
+      <Toggle checked={toggle} onChange={handleToggle} />
     </div>
   );
 }
