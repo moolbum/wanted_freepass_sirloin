@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as S from './Categories.style';
 import Input from 'components/Input';
 import { CATEGORIES } from './data';
@@ -6,6 +6,20 @@ import { CATEGORIES } from './data';
 const Categories = () => {
   const [isChecked, setIsChecked] = useState();
   const [categories, setCategories] = useState([]);
+
+  const [submitData, setSubmitData] = useState([]);
+
+  const fetchData = async () => {
+    const data = await fetch('data/setData.json');
+    const res = await data.json();
+    setSubmitData(res);
+  };
+
+  useEffect(() => {
+    (async () => {
+      await fetchData();
+    })();
+  }, []);
 
   const onChecked = e => {
     const { value, checked } = e.target;
