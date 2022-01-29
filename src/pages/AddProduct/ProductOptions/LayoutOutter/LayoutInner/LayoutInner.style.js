@@ -8,10 +8,10 @@ export const ButtonWrap = styled.div`
 export const Button = styled.button`
   margin-bottom: 20px;
   padding: 6px 26px;
-  color: ${props => props.color};
+  color: #e33e38;
   font-size: 16px;
   line-height: 28px;
-  border: 1px solid ${props => props.borderColor};
+  border: 1px solid #e33e38;
   border-radius: 4px;
   cursor: pointer;
   z-index: 100;

@@ -19,8 +19,8 @@ function LayoutInner() {
     // console.log(typeof counter);
     countArr.push(counter);
     setDetailOptions(countArr);
-    console.log(countArr);
-    console.log(counter);
+    // console.log(countArr);
+    // console.log(counter);
   };
   return (
     <>
@@ -33,7 +33,7 @@ function LayoutInner() {
             + 이미지 첨부
           </ProductOptionsButton>
         </S.InnerContent>
-        <S.InnerSubContent>
+        {/* <S.InnerSubContent>
           <S.OptionsNameInput placeholder="옵션명을 입력해주세요. (필수)" />
           <S.InputWrap>
             <S.OptionsInputWrap>
@@ -61,8 +61,8 @@ function LayoutInner() {
               <S.Span>+</S.Span>추가 옵션 상품 등록
             </S.AddProductOptionsButton>
           </S.AddProductOptionsButtonWrap>
-        </S.InnerSubContent>
-        {/* <InnerSubContent detailOptions={detailOptions} /> */}
+        </S.InnerSubContent> */}
+        <InnerSubContent detailOptions={detailOptions} />
         <ProductOptionsButton
           onClick={onHandleDetailOptions}
           width="100%"
