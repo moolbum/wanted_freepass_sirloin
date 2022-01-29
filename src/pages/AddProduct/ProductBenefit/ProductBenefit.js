@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import Toggle from '../../../components/Toggle';
+import Toggle from 'components/Toggle';
 
 function ProductBenefit() {
-  const [isOn, setIsOn] = useState(true);
+  const [toggle, setToggle] = useState(true);
 
   const handleToggle = () => {
-    setIsOn(isOn);
+    toggle ? setToggle(false) : setToggle(true);
   };
 
   return (
     <div>
-      <Toggle checked={isOn} onChange={handleToggle} />
+      <Toggle checked={toggle} onChange={handleToggle} />
     </div>
   );
 }

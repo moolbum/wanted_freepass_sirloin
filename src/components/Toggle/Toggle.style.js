@@ -4,7 +4,7 @@ export const ToggleWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: -40px;
+  margin: 5px 0 0 -20px;
 `;
 
 export const ToggleLabel = styled.label`
