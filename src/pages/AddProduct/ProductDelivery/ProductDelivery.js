@@ -1,8 +1,12 @@
 import React from 'react';
-import Toggle from '../../../components/Toggle';
+import Toggle from 'components/Toggle';
 
 function ProductDelivery() {
-  return <div />;
+  return (
+    <div>
+      <Toggle />
+    </div>
+  );
 }
 
 export default ProductDelivery;

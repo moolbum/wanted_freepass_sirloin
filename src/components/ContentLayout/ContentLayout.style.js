@@ -17,7 +17,8 @@ export const CardTitleWrap = styled.div`
   justify-content: space-between;
   width: 100%;
   border-top: none;
-  border: 1px solid ${({ theme }) => theme.gray};
+  border-top: 1px solid ${({ theme }) => theme.gray};
+  border-bottom: 1px solid ${({ theme }) => theme.gray};
 `;
 
 export const ContentWrapperBorder = styled.div`
@@ -56,13 +57,13 @@ export const NoSubTitleContent = styled.div`
   margin: 0 auto;
 `;
 
-export const Button = styled.button`
-  padding: 6px 26px;
-  color: navy;
-  font-size: 20px;
-  line-height: 28px;
-  border: 2px solid navy;
-  border-radius: 4px;
-  cursor: pointer;
-  z-index: 100;
-`;
+// export const Button = styled.button`
+//   padding: 6px 26px;
+//   color: navy;
+//   font-size: 20px;
+//   line-height: 28px;
+//   border: 2px solid navy;
+//   border-radius: 4px;
+//   cursor: pointer;
+//   z-index: 100;
+// `;
