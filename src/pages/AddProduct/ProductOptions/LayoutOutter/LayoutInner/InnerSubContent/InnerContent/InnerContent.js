@@ -26,9 +26,7 @@ function InnerContent() {
           <Text>개</Text>
         </OptionsInputWrap>
         <ReceiptCountry onChange={handleSelect} value={Selected}>
-          <Option value="비과세" selected="selected">
-            비과세
-          </Option>
+          <Option value="비과세">비과세</Option>
           <Option value="과세">과세</Option>
         </ReceiptCountry>
       </InputWrap>

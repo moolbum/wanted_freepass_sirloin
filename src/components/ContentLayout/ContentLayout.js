@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './ContentLayout.style';
 import ProductOptionsButton from '../../pages/AddProduct/ProductOptions/ProductOptionsButton/ProductOptionsButton';
 import ProductOptions from '../../pages/AddProduct/ProductOptions/ProductOptions';

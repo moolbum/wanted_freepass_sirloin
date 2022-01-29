@@ -87,9 +87,7 @@ function LayoutInner() {
               <S.Text>개</S.Text>
             </S.OptionsInputWrap>
             <S.ReceiptCountry onChange={handleSelect} value={Selected}>
-              <S.Option value="비과세" selected="selected">
-                비과세
-              </S.Option>
+              <S.Option value="비과세">비과세</S.Option>
               <S.Option value="과세">과세</S.Option>
             </S.ReceiptCountry>
           </S.InputWrap>

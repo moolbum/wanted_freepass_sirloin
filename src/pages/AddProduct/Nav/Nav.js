@@ -1,24 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ProductOptionsButton from '../ProductOptions/ProductOptionsButton/ProductOptionsButton';
 import * as S from './Nav.style';
+import { useSetData } from 'hooks/useSetData/useSetData';
 
 const Nav = () => {
-  const [submitData, setSubmitData] = useState([]);
-
-  const fetchData = async () => {
-    const data = await fetch('data/setData.json');
-    const res = await data.json();
-    setSubmitData(res);
-  };
-
-  useEffect(() => {
-    (async () => {
-      await fetchData();
-    })();
-  }, []);
-
+  const submitData = useSetData();
   const submit = () => {
-    console.log(submitData);
+    console.log(submitData[0]);
     // return alert('저장', submitData);
   };
 

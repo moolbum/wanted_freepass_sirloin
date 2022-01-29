@@ -12,9 +12,7 @@ function AddProduct() {
 
   const contentResult = e => {
     const { value, name } = e.target;
-    setResult({
-      [name]: value,
-    });
+    setResult({ ...result, [name]: value });
   };
 
   return (
