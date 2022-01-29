@@ -42,7 +42,7 @@ export const ContentTitle = styled.div`
   margin: 20px;
 `;
 
-export const InnerContent = styled.div`
+export const InnerContent = styled.form`
   margin: 20px;
 `;
 
