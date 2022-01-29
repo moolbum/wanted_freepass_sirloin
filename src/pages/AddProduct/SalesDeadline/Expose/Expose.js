@@ -4,10 +4,15 @@ import { PRODUCT_EXPOSE } from './data';
 import Calendar from 'components/Calendar';
 import { useInputChecked } from 'hooks/useInputChecked/useInputChecked';
 import { useCheckedDate } from 'hooks/useCheckedDate/useCheckedDate';
+import { useSetData } from 'hooks/useSetData/useSetData';
 
 const Expose = () => {
   const [radio, inputCheckedValue] = useInputChecked();
   const [value, checkedDate] = useCheckedDate();
+  const submitData = useSetData();
+
+  console.log('value', value);
+  console.log(typeof submitData, submitData);
 
   return (
     <div>

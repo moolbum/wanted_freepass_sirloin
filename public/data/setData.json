@@ -1,28 +1,26 @@
-[
-  {
-    "id": 0,
-    "expose": { "expose": "", "date": "" },
-    "deadline": { "deadline": "", "date": "" },
-    "categories": [],
-    "filter_tag": [],
-    "product_name": { "name": "", "code": "" },
-    "product_info": "",
-    "optionName": {
-      "optionName": "",
-      "normalPrice": "",
-      "salesPrice": "",
-      "stocks": ""
-    },
-    "delivery": {
-      "isSelectDate": false,
-      "isVisit": false,
-      "reservation": {
-        "isOn": false,
-        "dawn_date": "",
-        "normal_date": ""
-      }
-    },
-    "product_benefit": false,
-    "etc_setting": false
-  }
-]
+{
+  "id": 0,
+  "expose": { "expose": "", "date": "" },
+  "deadline": { "deadline": "", "date": "" },
+  "categories": [],
+  "filter_tag": [],
+  "product_name": { "name": "", "code": "" },
+  "product_info": "",
+  "optionName": {
+    "optionName": "",
+    "normalPrice": "",
+    "salesPrice": "",
+    "stocks": ""
+  },
+  "delivery": {
+    "isSelectDate": false,
+    "isVisit": false,
+    "reservation": {
+      "isOn": false,
+      "dawn_date": "",
+      "normal_date": ""
+    }
+  },
+  "product_benefit": false,
+  "etc_setting": false
+}
