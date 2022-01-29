@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
 export const InnerSubContent = styled.div`
-  /* height: 500px; */
   padding: 10px;
   background: #fff;
   border-radius: 4px;
   border: 1px solid #ddd;
-  background: red;
 `;
 
 export const Text = styled.p`
@@ -23,10 +21,7 @@ export const OptionsNameInput = styled.input`
   margin-bottom: 14px;
 `;
 
-export const OptionsInputWrap = styled.div`
-  /* width: 300px; */
-  /* background: yellow; */
-`;
+export const OptionsInputWrap = styled.div``;
 
 export const Input = styled.input`
   display: inline-block;

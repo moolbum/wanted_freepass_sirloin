@@ -8,10 +8,10 @@ export const ButtonWrap = styled.div`
 export const Button = styled.button`
   margin-bottom: 20px;
   padding: 6px 26px;
-  color: ${props => props.color};
+  color: #e33e38;
   font-size: 16px;
   line-height: 28px;
-  border: 1px solid ${props => props.borderColor};
+  border: 1px solid #e33e38;
   border-radius: 4px;
   cursor: pointer;
   z-index: 100;
@@ -36,11 +36,11 @@ export const InnerContent = styled.div`
 `;
 
 export const InnerSubContent = styled.div`
-  /* height: 500px; */
   padding: 10px;
   background: #fff;
   border-radius: 4px;
   border: 1px solid #ddd;
+  margin-bottom: 20px;
 `;
 
 export const Text = styled.p`
@@ -57,10 +57,7 @@ export const OptionsNameInput = styled.input`
   margin-bottom: 14px;
 `;
 
-export const OptionsInputWrap = styled.div`
-  /* width: 300px; */
-  /* background: yellow; */
-`;
+export const OptionsInputWrap = styled.div``;
 
 export const Input = styled.input`
   display: inline-block;

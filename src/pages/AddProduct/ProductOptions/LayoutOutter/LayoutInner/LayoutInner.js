@@ -4,6 +4,23 @@ import ProductOptionsButton from '../../ProductOptionsButton/ProductOptionsButto
 import InnerSubContent from './InnerSubContent/InnerSubContent';
 
 function LayoutInner() {
+  const [inputs, setInputs] = useState({
+    optionName: '',
+    normalPrice: '',
+    salesPrice: '',
+    stocks: '',
+  });
+
+  const { optionName, normalPrice, salesPrice, stocks } = inputs;
+
+  const onChange = e => {
+    const { value, name } = e.target;
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  };
+  console.log(inputs);
   const [Selected, setSelected] = useState('비과세');
   const handleSelect = e => {
     setSelected(e.target.value);
@@ -16,11 +33,8 @@ function LayoutInner() {
     let countArr = [...detailOptions];
     let counter = Number(countArr.slice(-1));
     counter += 1;
-    // console.log(typeof counter);
     countArr.push(counter);
     setDetailOptions(countArr);
-    console.log(countArr);
-    console.log(counter);
   };
   return (
     <>
@@ -34,19 +48,42 @@ function LayoutInner() {
           </ProductOptionsButton>
         </S.InnerContent>
         <S.InnerSubContent>
-          <S.OptionsNameInput placeholder="옵션명을 입력해주세요. (필수)" />
+          <S.OptionsNameInput
+            onChange={onChange}
+            value={optionName}
+            name="optionName"
+            placeholder="옵션명을 입력해주세요. (필수)"
+          />
           <S.InputWrap>
             <S.OptionsInputWrap>
-              <S.OptionsInput placeholder="상품 판매가(필수)" />
+              <S.OptionsInput
+                onChange={onChange}
+                value={normalPrice}
+                name="normalPrice"
+                type="number"
+                placeholder="상품 정상가(필수)"
+              />
               <S.Text>원</S.Text>
             </S.OptionsInputWrap>
             <S.Text>할인율 %</S.Text>
             <S.OptionsInputWrap>
-              <S.OptionsInput placeholder="상품 판매가(필수)" />
+              <S.OptionsInput
+                onChange={onChange}
+                value={salesPrice}
+                name="salesPrice"
+                type="number"
+                placeholder="상품 판매가(필수)"
+              />
               <S.Text>원</S.Text>
             </S.OptionsInputWrap>
             <S.OptionsInputWrap>
-              <S.OptionsInput placeholder="재고(필수)" />
+              <S.OptionsInput
+                onChange={onChange}
+                value={stocks}
+                name="stocks"
+                type="number"
+                placeholder="재고(필수)"
+              />
               <S.Text>개</S.Text>
             </S.OptionsInputWrap>
             <S.ReceiptCountry onChange={handleSelect} value={Selected}>
@@ -62,7 +99,7 @@ function LayoutInner() {
             </S.AddProductOptionsButton>
           </S.AddProductOptionsButtonWrap>
         </S.InnerSubContent>
-        {/* <InnerSubContent detailOptions={detailOptions} /> */}
+        <InnerSubContent detailOptions={detailOptions} />
         <ProductOptionsButton
           onClick={onHandleDetailOptions}
           width="100%"
