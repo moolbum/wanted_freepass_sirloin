@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as S from './Categories.style';
-import Input from '../../../../components/Input';
+import Input from 'components/Input';
 import { CATEGORIES } from './data';
 
 const Categories = () => {
@@ -23,6 +23,7 @@ const Categories = () => {
 
     console.log('삭제해', value, i);
   };
+  console.log(!!categories.length);
 
   return (
     <S.Container>
@@ -31,6 +32,7 @@ const Categories = () => {
           return (
             <Input
               key={data.id}
+              name={data.value}
               type="checkbox"
               value={data.value}
               onChange={onChecked}
@@ -39,6 +41,7 @@ const Categories = () => {
         })}
       </S.Wrapper>
       <S.Wrapper>
+        {!!categories ? '' : '카테고리를 지정해주세요'}
         {categories.map((idx, i) => {
           return (
             <S.Tag key={idx}>

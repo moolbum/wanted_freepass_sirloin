@@ -2,12 +2,17 @@ import Deadline from './SalesDeadline/Deadline';
 import Expose from './SalesDeadline/Expose';
 import ProductOptionsButton from './ProductOptions/ProductOptionsButton/ProductOptionsButton';
 import ProductOptions from './ProductOptions/ProductOptions';
-import Categories from './ProductInfos/Categories/Categories';
 import DepartureDate from './ProductDelivery/DepartureDate/DepartureDate';
 import Visited from './ProductDelivery/Visited/Visited';
 import PreOrder from './ProductDelivery/PreOrder/PreOrder';
 import ProductBenefit from './ProductBenefit/ProductBenefit';
 import OtherOption from './OtherOption/OtherOption';
+import Categories from './ProductInfos/Categories/Categories';
+import FilterTag from './ProductInfos/FilterTag/FilterTag';
+import ProductName from './ProductInfos/ProductName/ProductName';
+import ProductInfo from './ProductInfos/ProductInfo/ProductInfo';
+import ProductThumb from './ProductInfos/ProductThumb/ProductThumb';
+import ProductImgs from './ProductInfos/ProductImgs/ProductImgs';
 
 export const CONTENT = [
   {
@@ -31,27 +36,27 @@ export const CONTENT = [
   {
     id: 3,
     subtitle: '필터 태그',
-    content: <Deadline />,
+    content: <FilterTag />,
   },
   {
     id: 4,
     subtitle: '상품명',
-    content: <Deadline />,
+    content: <ProductName />,
   },
   {
     id: 5,
     subtitle: '상품 구성 소개 정보',
-    content: <Deadline />,
+    content: <ProductInfo />,
   },
   {
     id: 6,
     subtitle: '상품 썸네일',
-    content: <Deadline />,
+    content: <ProductThumb />,
   },
   {
     id: 7,
     subtitle: '상품 대표 이미지',
-    content: <Deadline />,
+    content: <ProductImgs />,
   },
   {
     id: 8,
