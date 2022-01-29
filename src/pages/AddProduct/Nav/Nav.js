@@ -4,9 +4,16 @@ import * as S from './Nav.style';
 import { useSetData } from 'hooks/useSetData/useSetData';
 
 const Nav = () => {
+<<<<<<< HEAD
   const data = useSetData();
   const submit = () => {
     console.log(data);
+=======
+  const submitData = useSetData();
+  const submit = () => {
+    console.log(submitData[0]);
+    // return alert('저장', submitData);
+>>>>>>> master
   };
 
   return (

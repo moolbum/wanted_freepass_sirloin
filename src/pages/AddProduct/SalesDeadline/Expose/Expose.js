@@ -9,9 +9,10 @@ import { useSetData } from 'hooks/useSetData/useSetData';
 const Expose = () => {
   const [radio, inputCheckedValue] = useInputChecked();
   const [value, checkedDate] = useCheckedDate();
-  const data = useSetData();
+  const submitData = useSetData();
 
-  console.log(data);
+  console.log('value', value);
+  console.log(typeof submitData, submitData);
 
   return (
     <div>
