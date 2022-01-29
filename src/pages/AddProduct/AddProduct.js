@@ -6,18 +6,6 @@ import Nav from './Nav';
 import { CONTENT } from './AddProductData';
 
 function AddProduct() {
-<<<<<<< HEAD
-=======
-  const [result, setResult] = useState({
-    name: '',
-  });
-
-  const contentResult = e => {
-    const { value, name } = e.target;
-    setResult({ ...result, [name]: value });
-  };
-
->>>>>>> master
   return (
     <>
       <Nav />
